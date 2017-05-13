@@ -1112,3 +1112,1134 @@ Migrating to CreateLectures (20170508191002)
   [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mLecture Load (0.3ms)[0m  [1m[34mSELECT  "lectures".* FROM "lectures" LIMIT ?[0m  [["LIMIT", 11]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "lectures"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (57.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (33.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20170510080829)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (17.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (16.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20170510080829)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20170510080829)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20170510080829)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20170510080829)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20170510080829)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "article" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170510080829"]]
+  [1m[35m (28.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-05-12 07:58:08.867415"], ["updated_at", "2017-05-12 07:58:08.867415"]]
+  [1m[35m (28.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20170510080829)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "article" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170510080829"]]
+  [1m[35m (15.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-05-12 07:58:42.946001"], ["updated_at", "2017-05-12 07:58:42.946001"]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (19.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20170510080829)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170510080829"]]
+  [1m[35m (15.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-05-12 08:10:55.374063"], ["updated_at", "2017-05-12 08:10:55.374063"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (19.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (18.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20170510080829)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170510080829"]]
+  [1m[35m (14.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-05-12 08:11:39.946481"], ["updated_at", "2017-05-12 08:11:39.946481"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "프링글스, 태국 전통요리 ‘�c얌꿍’의 풍미를 구현한 이색 감자칩 출시"], ["created_at", "2017-05-12 08:11:57.412978"], ["updated_at", "2017-05-12 08:11:57.412978"]]
+  [1m[35m (24.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "일본서 자취 감춘 감자칩, 가격 폭등에 사재기 극성"], ["created_at", "2017-05-12 08:11:57.455609"], ["updated_at", "2017-05-12 08:11:57.455609"]]
+  [1m[35m (25.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "‘총알배송’은 어떻게 가능할까? - 최적계획 찾기"], ["created_at", "2017-05-12 08:11:57.483439"], ["updated_at", "2017-05-12 08:11:57.483439"]]
+  [1m[35m (24.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "국내 첫 '프링글스 얌꿍' 감자칩 출시"], ["created_at", "2017-05-12 08:11:57.511080"], ["updated_at", "2017-05-12 08:11:57.511080"]]
+  [1m[35m (27.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "감자칩에 들어가는 감자는 몇 개? \"내가 겨우 이걸 먹었다니\""], ["created_at", "2017-05-12 08:11:57.541652"], ["updated_at", "2017-05-12 08:11:57.541652"]]
+  [1m[35m (27.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "日 감자품귀 사태 장기화…가루비 등 감자칩 생산중단"], ["created_at", "2017-05-12 08:11:57.572212"], ["updated_at", "2017-05-12 08:11:57.572212"]]
+  [1m[35m (26.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[리얼푸드]日, 감자 수확량 감소에 따른 감자칩 품귀현상"], ["created_at", "2017-05-12 08:11:57.601647"], ["updated_at", "2017-05-12 08:11:57.601647"]]
+  [1m[35m (27.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "일본, 때아닌 '감자칩 대란'"], ["created_at", "2017-05-12 08:11:57.631992"], ["updated_at", "2017-05-12 08:11:57.631992"]]
+  [1m[35m (28.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "프리토레이 감자칩 살모넬라 감염 리콜"], ["created_at", "2017-05-12 08:11:57.663667"], ["updated_at", "2017-05-12 08:11:57.663667"]]
+  [1m[35m (27.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "<뷰티스카이2> 촉촉피부 뷰티돌 경리, 수분크림 검증 위해 감자칩까지 동원?!"], ["created_at", "2017-05-12 08:11:57.694237"], ["updated_at", "2017-05-12 08:11:57.694237"]]
+  [1m[35m (25.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "프리토레이 감자칩 리콜…살모넬라균 함유 가능성"], ["created_at", "2017-05-12 08:11:58.419599"], ["updated_at", "2017-05-12 08:11:58.419599"]]
+  [1m[35m (24.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "美 레이 감자칩, 살모넬라균 가능성 전량 리콜…국내에서도 직구 통해 유통 '..."], ["created_at", "2017-05-12 08:11:58.446907"], ["updated_at", "2017-05-12 08:11:58.446907"]]
+  [1m[35m (20.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "뷰티스카이 2 촉촉피부 뷰티돌 경리, 수분크림 검증 위해 감자칩까지 동원"], ["created_at", "2017-05-12 08:11:58.470159"], ["updated_at", "2017-05-12 08:11:58.470159"]]
+  [1m[35m (26.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "카우치 포테이토族 울린 日감자칩 브랜드 ‘가루비’의 속사정"], ["created_at", "2017-05-12 08:11:58.499391"], ["updated_at", "2017-05-12 08:11:58.499391"]]
+  [1m[35m (24.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "선거운동 도중 감자칩 즐기는 테레사 메이 영국 총리"], ["created_at", "2017-05-12 08:11:58.526453"], ["updated_at", "2017-05-12 08:11:58.526453"]]
+  [1m[35m (22.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "코스모스제과 \"`이상한 감자칩`, 대만과 홍콩서 인기\""], ["created_at", "2017-05-12 08:11:58.551551"], ["updated_at", "2017-05-12 08:11:58.551551"]]
+  [1m[35m (26.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "코스모스제과 ‘이상한 감자칩’, 대만·홍콩에서 화제"], ["created_at", "2017-05-12 08:11:58.580442"], ["updated_at", "2017-05-12 08:11:58.580442"]]
+  [1m[35m (26.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "프링글스, 태국 전통요리 '똠얌꿍' 한정판 출시"], ["created_at", "2017-05-12 08:11:58.609642"], ["updated_at", "2017-05-12 08:11:58.609642"]]
+  [1m[35m (24.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[새제품]뚜레쥬르, 우리쌀로 만든 '착한빵'"], ["created_at", "2017-05-12 08:11:58.637009"], ["updated_at", "2017-05-12 08:11:58.637009"]]
+  [1m[35m (24.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[새로 나왔어요!] 롯데제과 CJ제일제당 롯데푸드 外"], ["created_at", "2017-05-12 08:11:58.664694"], ["updated_at", "2017-05-12 08:11:58.664694"]]
+  [1m[35m (25.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "감자칩 1봉지에 6만원? 일본, 때 아닌 감자칩 품귀 소동"], ["created_at", "2017-05-12 08:11:59.398703"], ["updated_at", "2017-05-12 08:11:59.398703"]]
+  [1m[35m (25.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "코스모스제과, ‘이상한 감자칩’ 대만, 홍콩에서 인기"], ["created_at", "2017-05-12 08:11:59.426763"], ["updated_at", "2017-05-12 08:11:59.426763"]]
+  [1m[35m (20.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "식음료업계 'SNS 인증샷' 마케팅 바람"], ["created_at", "2017-05-12 08:11:59.449948"], ["updated_at", "2017-05-12 08:11:59.449948"]]
+  [1m[35m (22.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[이코노미조선] 기가 막히는 정용진의 '촉'…피코크·노브랜드 덕에 이마트만..."], ["created_at", "2017-05-12 08:11:59.475678"], ["updated_at", "2017-05-12 08:11:59.475678"]]
+  [1m[35m (21.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "짭짤하고 달콤한 '단짠' 감자칩 새로운 트렌드로"], ["created_at", "2017-05-12 08:11:59.500341"], ["updated_at", "2017-05-12 08:11:59.500341"]]
+  [1m[35m (24.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "감자칩에 치즈버거 맛 담은 ‘프링글스 치즈버거’ 등 이색적인 맛으로 소비자..."], ["created_at", "2017-05-12 08:11:59.528582"], ["updated_at", "2017-05-12 08:11:59.528582"]]
+  [1m[35m (24.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[제과업계 신상품] 롯데제과-‘화이트데이 기획제품 5종’, 오리온-‘오!감자..."], ["created_at", "2017-05-12 08:11:59.555852"], ["updated_at", "2017-05-12 08:11:59.555852"]]
+  [1m[35m (25.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "두꺼워진 감자칩…제과업계 식감으로 승부수"], ["created_at", "2017-05-12 08:11:59.584536"], ["updated_at", "2017-05-12 08:11:59.584536"]]
+  [1m[35m (25.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "농심, 국내 최초 트러플맛 감자칩 '수미칩 프라임' 출시"], ["created_at", "2017-05-12 08:11:59.613723"], ["updated_at", "2017-05-12 08:11:59.613723"]]
+  [1m[35m (24.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "농심, 국내 최초 트러플맛 감자칩 '수미칩 프라임' 출시"], ["created_at", "2017-05-12 08:11:59.641387"], ["updated_at", "2017-05-12 08:11:59.641387"]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "(영상) 감자칩 포장 200개 모아 올라타니..."], ["created_at", "2017-05-12 08:12:00.479885"], ["updated_at", "2017-05-12 08:12:00.479885"]]
+  [1m[35m (26.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "프링글스, 바삭한 감자칩 안에 살아있는 진짜 치즈버거 맛! 선보여"], ["created_at", "2017-05-12 08:12:00.509422"], ["updated_at", "2017-05-12 08:12:00.509422"]]
+  [1m[35m (28.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "SF9 다원, 독특한 레시피 공개 '불닭볶음면+감자칩'(V앱)"], ["created_at", "2017-05-12 08:12:00.541192"], ["updated_at", "2017-05-12 08:12:00.541192"]]
+  [1m[35m (24.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "바삭한 감자칩과 치즈버거의 풍부한 맛이 만났다, '프링글스 치즈버거' 출시"], ["created_at", "2017-05-12 08:12:00.568488"], ["updated_at", "2017-05-12 08:12:00.568488"]]
+  [1m[35m (28.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "감자칩 시식하면서 돈 버는 사람이 있다"], ["created_at", "2017-05-12 08:12:00.599913"], ["updated_at", "2017-05-12 08:12:00.599913"]]
+  [1m[35m (26.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[식음료단신]농심, 국내 최초 트러플맛 감자칩 출시 外"], ["created_at", "2017-05-12 08:12:00.629264"], ["updated_at", "2017-05-12 08:12:00.629264"]]
+  [1m[35m (27.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[봄철 식음료 특집] 농심 ‘수미칩 프라임’, 송로버섯의 풍미를 감자칩에 담..."], ["created_at", "2017-05-12 08:12:00.659360"], ["updated_at", "2017-05-12 08:12:00.659360"]]
+  [1m[35m (26.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[퓨처스포럼]남경필 \"감자칩, 드셔보시죠\""], ["created_at", "2017-05-12 08:12:00.689398"], ["updated_at", "2017-05-12 08:12:00.689398"]]
+  [1m[35m (25.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "콜라, 사이다, 요구르트맛 감자칩에 대한 먹방BJ 밴쯔의 '냉혹한' 한줄평"], ["created_at", "2017-05-12 08:12:00.717933"], ["updated_at", "2017-05-12 08:12:00.717933"]]
+  [1m[35m (27.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "고소하고 담백한 감자칩에 요구르트, 콜라, 사이다를"], ["created_at", "2017-05-12 08:12:00.747910"], ["updated_at", "2017-05-12 08:12:00.747910"]]
+  [1m[35m (26.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 115.145.83.62 at 2017-05-12 08:17:42 +0000
+Cannot render console from 115.145.83.62! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.1.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.1.0/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 25ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/index" for 115.145.83.62 at 2017-05-12 08:18:03 +0000
+Cannot render console from 115.145.83.62! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (265.1ms)
+Completed 500 Internal Server Error in 272ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `articles' for #<#<Class:0x007f64d887e580>:0x007f64d004b000>):
+    1: <h1>Articles#index</h1>
+    2: <p>Find me in app/views/articles/index.html.erb</p>
+    3: <% articles.each do |article| %>
+    4:   <%= puts article.title %>
+    5: <% end %>
+  
+app/views/articles/index.html.erb:3:in `_app_views_articles_index_html_erb___2310901967294663242_70035553123680'
+Started GET "/" for 115.145.83.62 at 2017-05-12 08:19:57 +0000
+Cannot render console from 115.145.83.62! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/" for 115.145.83.62 at 2017-05-12 08:20:31 +0000
+Cannot render console from 115.145.83.62! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.1.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.1.0/lib/rails/templates/rails/welcome/index.html.erb (15.1ms)
+Completed 200 OK in 70ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/index" for 115.145.83.62 at 2017-05-12 08:20:38 +0000
+Cannot render console from 115.145.83.62! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (67.4ms)
+Completed 200 OK in 1093ms (Views: 1085.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/articles/index" for 115.145.83.62 at 2017-05-12 08:21:21 +0000
+Cannot render console from 115.145.83.62! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능 절대평가로 바뀌나…교육계, 기대 반 우려 반"], ["created_at", "2017-05-12 08:46:15.232050"], ["updated_at", "2017-05-12 08:46:15.232050"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능은 절대 평가, 외고·자사고는 일반고 전환 추진"], ["created_at", "2017-05-12 08:46:15.265975"], ["updated_at", "2017-05-12 08:46:15.265975"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "이투스, EBS 수능특강 영어독해연습 완전학습 출시"], ["created_at", "2017-05-12 08:46:15.281850"], ["updated_at", "2017-05-12 08:46:15.281850"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[새 정부 교육정책 전망]수능 전 과목 절대평가 전환"], ["created_at", "2017-05-12 08:46:15.297534"], ["updated_at", "2017-05-12 08:46:15.297534"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능개편 폭풍전야…절대평가 전환? 공통과목만 출제?"], ["created_at", "2017-05-12 08:46:15.312532"], ["updated_at", "2017-05-12 08:46:15.312532"]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "학생들 \"수능이 공정한데 비중 줄이겠다니…\""], ["created_at", "2017-05-12 08:46:15.328636"], ["updated_at", "2017-05-12 08:46:15.328636"]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "중3부터 수능 절대평가...내신 고득점 경쟁 달아오른다"], ["created_at", "2017-05-12 08:46:15.342488"], ["updated_at", "2017-05-12 08:46:15.342488"]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "새 정부 수능 절대평가로 변화"], ["created_at", "2017-05-12 08:46:15.358709"], ["updated_at", "2017-05-12 08:46:15.358709"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[단독] 김상곤 \"2021학년도 수능부터 9등급 절대평가\""], ["created_at", "2017-05-12 08:46:15.374584"], ["updated_at", "2017-05-12 08:46:15.374584"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인 정부 뭐가 바뀌나] 입시정책 '일신'...수능·고교 내신 완전 절대평가..."], ["created_at", "2017-05-12 08:46:15.395098"], ["updated_at", "2017-05-12 08:46:15.395098"]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "입시플라이, 리얼 오리지널 ‘6·9·11 평가원 수능기출 30회분’ 출시"], ["created_at", "2017-05-12 08:46:15.885073"], ["updated_at", "2017-05-12 08:46:15.885073"]]
+  [1m[35m (26.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "3년 뒤 주요대학 정시 사라지나…文 '수능 절대평가' 방침"], ["created_at", "2017-05-12 08:46:15.914234"], ["updated_at", "2017-05-12 08:46:15.914234"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "분당청솔학원, 2018 수능대비 반수반 개강…고3, N수생, 학부모 위한 입시전략..."], ["created_at", "2017-05-12 08:46:15.930299"], ["updated_at", "2017-05-12 08:46:15.930299"]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "697일만 QS, KIA 김진우 최종 수능 통과"], ["created_at", "2017-05-12 08:46:15.946692"], ["updated_at", "2017-05-12 08:46:15.946692"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능 출제 오류…\"정부, 수험생에게 배상\""], ["created_at", "2017-05-12 08:46:15.962411"], ["updated_at", "2017-05-12 08:46:15.962411"]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[오늘의 SNS 이슈] 수능오류 · 한미정상회담 · 휴대용 선풍기 폭발"], ["created_at", "2017-05-12 08:46:15.978762"], ["updated_at", "2017-05-12 08:46:15.978762"]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[입시대장] 수능 못 봐도 ‘주요대학’ 합격하는 법"], ["created_at", "2017-05-12 08:46:15.992858"], ["updated_at", "2017-05-12 08:46:15.992858"]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[4~6등급으로 서울 수도권 대학 진학을 위한 적성고사전형 핵심포인트 ② 12개..."], ["created_at", "2017-05-12 08:46:16.006548"], ["updated_at", "2017-05-12 08:46:16.006548"]]
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능 내신 국어시험 1등급 대비, EBS 연계 문제 점검과 유형별 접근 전략이 관..."], ["created_at", "2017-05-12 08:46:16.024610"], ["updated_at", "2017-05-12 08:46:16.024610"]]
+  [1m[35m (19.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "내신과 수능 우수아로 키우려면 심화된 내용을 경험시켜라"], ["created_at", "2017-05-12 08:46:16.046699"], ["updated_at", "2017-05-12 08:46:16.046699"]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "대치·분당 명인학원 ‘김승리 강사’의 수능 국어 1등급 전략"], ["created_at", "2017-05-12 08:46:16.527182"], ["updated_at", "2017-05-12 08:46:16.527182"]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "2014 수능 세계지리 오류… 법원 \"최고 1000만원씩 수험생에 배상하라\" 판결"], ["created_at", "2017-05-12 08:46:16.543157"], ["updated_at", "2017-05-12 08:46:16.543157"]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "잠실에 특화된 중고 내신·수능 전문"], ["created_at", "2017-05-12 08:46:16.557579"], ["updated_at", "2017-05-12 08:46:16.557579"]]
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "2014학년도 수능 세계지리 오류…수험생에 손해배상 판결"], ["created_at", "2017-05-12 08:46:16.573746"], ["updated_at", "2017-05-12 08:46:16.573746"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[새 정부 정책]⑧수능 절대평가로 전환하고 외고·자사고 폐지"], ["created_at", "2017-05-12 08:46:16.588904"], ["updated_at", "2017-05-12 08:46:16.588904"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "자사고 폐지ㆍ수능 절대평가… 文 정부 교육공약에 혼란스러운 ‘중3’"], ["created_at", "2017-05-12 08:46:16.602502"], ["updated_at", "2017-05-12 08:46:16.602502"]]
+  [1m[35m (11.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "국정 교과서 폐지, 수능 절대평가 논의 불붙는다"], ["created_at", "2017-05-12 08:46:16.616588"], ["updated_at", "2017-05-12 08:46:16.616588"]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "'외고·자사고 폐지, 수능 절대평가'‥교육개혁 예고"], ["created_at", "2017-05-12 08:46:16.630628"], ["updated_at", "2017-05-12 08:46:16.630628"]]
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인 시대]대입 학생부·수능전형으로 단순화...논술 폐지"], ["created_at", "2017-05-12 08:46:16.646655"], ["updated_at", "2017-05-12 08:46:16.646655"]]
+  [1m[35m (15.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "6월 모평 대비, 전문과외사이트 대치수능연구소 학습플랜 제공"], ["created_at", "2017-05-12 08:46:16.665414"], ["updated_at", "2017-05-12 08:46:16.665414"]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "2014년도 수능 오류… 고법 “최고 1000만원 수험생에 손해 배상”"], ["created_at", "2017-05-12 08:46:17.186219"], ["updated_at", "2017-05-12 08:46:17.186219"]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인 당선] 수능·고교 내신 완전 절대평가제로…입시정책 확 바뀔 듯"], ["created_at", "2017-05-12 08:46:17.202341"], ["updated_at", "2017-05-12 08:46:17.202341"]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인 시대]입시 확 바뀌나…7월 수능 개편안 주목"], ["created_at", "2017-05-12 08:46:17.216660"], ["updated_at", "2017-05-12 08:46:17.216660"]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인시대-교육?] 수능·고교내신 절대평가로…교육격차 해소 방점"], ["created_at", "2017-05-12 08:46:17.230181"], ["updated_at", "2017-05-12 08:46:17.230181"]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "광주 남구, 강남 유명강사 초청 2018학년도 수능 설명회 개최"], ["created_at", "2017-05-12 08:46:17.244395"], ["updated_at", "2017-05-12 08:46:17.244395"]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능 절대평가·외고 자사고 폐지...달라질 교육 정책"], ["created_at", "2017-05-12 08:46:17.258261"], ["updated_at", "2017-05-12 08:46:17.258261"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "'쿨까당' 김지민 \"수능 수포자, 격하게 공감\""], ["created_at", "2017-05-12 08:46:17.273290"], ["updated_at", "2017-05-12 08:46:17.273290"]]
+  [1m[35m (14.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[영상] 문재인 시대, 수능 절대평가·대입 단순화···교육정책 대변화 예고"], ["created_at", "2017-05-12 08:46:17.290546"], ["updated_at", "2017-05-12 08:46:17.290546"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[19대 대통령 문재인] 대입 수능 절대평가로 전환…외국어고·국제고 사라진다"], ["created_at", "2017-05-12 08:46:17.305430"], ["updated_at", "2017-05-12 08:46:17.305430"]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "올해 수시 논술전형 인원 12%↓…수능 최저기준 미적용 대학은 10곳"], ["created_at", "2017-05-12 08:46:17.318629"], ["updated_at", "2017-05-12 08:46:17.318629"]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "이투스, EBS 수능특강 영어독해연습 완전학습 출시"], ["created_at", "2017-05-12 09:18:00.498367"], ["updated_at", "2017-05-12 09:18:00.498367"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능 절대평가로 바뀌나…교육계, 기대 반 우려 반"], ["created_at", "2017-05-12 09:18:00.520311"], ["updated_at", "2017-05-12 09:18:00.520311"]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "\"논술·특기자전형 폐지, 수능 절대평가\""], ["created_at", "2017-05-12 09:18:00.533523"], ["updated_at", "2017-05-12 09:18:00.533523"]]
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능은 절대 평가, 외고·자사고는 일반고 전환 추진"], ["created_at", "2017-05-12 09:18:00.546769"], ["updated_at", "2017-05-12 09:18:00.546769"]]
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[새 정부 교육정책 전망]수능 전 과목 절대평가 전환"], ["created_at", "2017-05-12 09:18:00.561152"], ["updated_at", "2017-05-12 09:18:00.561152"]]
+  [1m[35m (15.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능개편 폭풍전야…절대평가 전환? 공통과목만 출제?"], ["created_at", "2017-05-12 09:18:00.579456"], ["updated_at", "2017-05-12 09:18:00.579456"]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "학생들 \"수능이 공정한데 비중 줄이겠다니…\""], ["created_at", "2017-05-12 09:18:00.594438"], ["updated_at", "2017-05-12 09:18:00.594438"]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "중3부터 수능 절대평가...내신 고득점 경쟁 달아오른다"], ["created_at", "2017-05-12 09:18:00.608479"], ["updated_at", "2017-05-12 09:18:00.608479"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "새 정부 수능 절대평가로 변화"], ["created_at", "2017-05-12 09:18:00.626188"], ["updated_at", "2017-05-12 09:18:00.626188"]]
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[단독] 김상곤 \"2021학년도 수능부터 9등급 절대평가\""], ["created_at", "2017-05-12 09:18:00.640904"], ["updated_at", "2017-05-12 09:18:00.640904"]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인 정부 뭐가 바뀌나] 입시정책 '일신'...수능·고교 내신 완전 절대평가..."], ["created_at", "2017-05-12 09:18:01.231851"], ["updated_at", "2017-05-12 09:18:01.231851"]]
+  [1m[35m (20.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "입시플라이, 리얼 오리지널 ‘6·9·11 평가원 수능기출 30회분’ 출시"], ["created_at", "2017-05-12 09:18:01.259750"], ["updated_at", "2017-05-12 09:18:01.259750"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "분당청솔학원, 2018 수능대비 반수반 개강…고3, N수생, 학부모 위한 입시전략..."], ["created_at", "2017-05-12 09:18:01.283036"], ["updated_at", "2017-05-12 09:18:01.283036"]]
+  [1m[35m (18.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "697일만 QS, KIA 김진우 최종 수능 통과"], ["created_at", "2017-05-12 09:18:01.311374"], ["updated_at", "2017-05-12 09:18:01.311374"]]
+  [1m[35m (23.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (9.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능 출제 오류…\"정부, 수험생에게 배상\""], ["created_at", "2017-05-12 09:18:01.356607"], ["updated_at", "2017-05-12 09:18:01.356607"]]
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (3.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "3년 뒤 주요대학 정시 사라지나…文 '수능 절대평가' 방침"], ["created_at", "2017-05-12 09:18:01.400920"], ["updated_at", "2017-05-12 09:18:01.400920"]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[오늘의 SNS 이슈] 수능오류 · 한미정상회담 · 휴대용 선풍기 폭발"], ["created_at", "2017-05-12 09:18:01.426554"], ["updated_at", "2017-05-12 09:18:01.426554"]]
+  [1m[35m (15.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[입시대장] 수능 못 봐도 ‘주요대학’ 합격하는 법"], ["created_at", "2017-05-12 09:18:01.449405"], ["updated_at", "2017-05-12 09:18:01.449405"]]
+  [1m[35m (16.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[4~6등급으로 서울 수도권 대학 진학을 위한 적성고사전형 핵심포인트 ② 12개..."], ["created_at", "2017-05-12 09:18:01.481381"], ["updated_at", "2017-05-12 09:18:01.481381"]]
+  [1m[35m (20.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능 내신 국어시험 1등급 대비, EBS 연계 문제 점검과 유형별 접근 전략이 관..."], ["created_at", "2017-05-12 09:18:01.508075"], ["updated_at", "2017-05-12 09:18:01.508075"]]
+  [1m[35m (14.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "내신과 수능 우수아로 키우려면 심화된 내용을 경험시켜라"], ["created_at", "2017-05-12 09:18:02.163981"], ["updated_at", "2017-05-12 09:18:02.163981"]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "대치·분당 명인학원 ‘김승리 강사’의 수능 국어 1등급 전략"], ["created_at", "2017-05-12 09:18:02.182391"], ["updated_at", "2017-05-12 09:18:02.182391"]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "2014 수능 세계지리 오류… 법원 \"최고 1000만원씩 수험생에 배상하라\" 판결"], ["created_at", "2017-05-12 09:18:02.201310"], ["updated_at", "2017-05-12 09:18:02.201310"]]
+  [1m[35m (15.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "잠실에 특화된 중고 내신·수능 전문"], ["created_at", "2017-05-12 09:18:02.221474"], ["updated_at", "2017-05-12 09:18:02.221474"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "2014학년도 수능 세계지리 오류…수험생에 손해배상 판결"], ["created_at", "2017-05-12 09:18:02.238891"], ["updated_at", "2017-05-12 09:18:02.238891"]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[새 정부 정책]⑧수능 절대평가로 전환하고 외고·자사고 폐지"], ["created_at", "2017-05-12 09:18:02.256357"], ["updated_at", "2017-05-12 09:18:02.256357"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "자사고 폐지ㆍ수능 절대평가… 文 정부 교육공약에 혼란스러운 ‘중3’"], ["created_at", "2017-05-12 09:18:02.273296"], ["updated_at", "2017-05-12 09:18:02.273296"]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (8.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "국정 교과서 폐지, 수능 절대평가 논의 불붙는다"], ["created_at", "2017-05-12 09:18:02.291324"], ["updated_at", "2017-05-12 09:18:02.291324"]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "'외고·자사고 폐지, 수능 절대평가'‥교육개혁 예고"], ["created_at", "2017-05-12 09:18:02.317337"], ["updated_at", "2017-05-12 09:18:02.317337"]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인 시대]대입 학생부·수능전형으로 단순화...논술 폐지"], ["created_at", "2017-05-12 09:18:02.333578"], ["updated_at", "2017-05-12 09:18:02.333578"]]
+  [1m[35m (11.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "6월 모평 대비, 전문과외사이트 대치수능연구소 학습플랜 제공"], ["created_at", "2017-05-12 09:18:02.919581"], ["updated_at", "2017-05-12 09:18:02.919581"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "2014년도 수능 오류… 고법 “최고 1000만원 수험생에 손해 배상”"], ["created_at", "2017-05-12 09:18:02.934014"], ["updated_at", "2017-05-12 09:18:02.934014"]]
+  [1m[35m (16.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인 당선] 수능·고교 내신 완전 절대평가제로…입시정책 확 바뀔 듯"], ["created_at", "2017-05-12 09:18:02.953996"], ["updated_at", "2017-05-12 09:18:02.953996"]]
+  [1m[35m (18.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인시대-교육?] 수능·고교내신 절대평가로…교육격차 해소 방점"], ["created_at", "2017-05-12 09:18:02.978239"], ["updated_at", "2017-05-12 09:18:02.978239"]]
+  [1m[35m (16.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인 시대]입시 확 바뀌나…7월 수능 개편안 주목"], ["created_at", "2017-05-12 09:18:02.998476"], ["updated_at", "2017-05-12 09:18:02.998476"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "광주 남구, 강남 유명강사 초청 2018학년도 수능 설명회 개최"], ["created_at", "2017-05-12 09:18:03.013393"], ["updated_at", "2017-05-12 09:18:03.013393"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능 절대평가·외고 자사고 폐지...달라질 교육 정책"], ["created_at", "2017-05-12 09:18:03.029472"], ["updated_at", "2017-05-12 09:18:03.029472"]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "'쿨까당' 김지민 \"수능 수포자, 격하게 공감\""], ["created_at", "2017-05-12 09:18:03.046264"], ["updated_at", "2017-05-12 09:18:03.046264"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[영상] 문재인 시대, 수능 절대평가·대입 단순화···교육정책 대변화 예고"], ["created_at", "2017-05-12 09:18:03.062813"], ["updated_at", "2017-05-12 09:18:03.062813"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[19대 대통령 문재인] 대입 수능 절대평가로 전환…외국어고·국제고 사라진다"], ["created_at", "2017-05-12 09:18:03.079620"], ["updated_at", "2017-05-12 09:18:03.079620"]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "이투스, EBS 수능특강 영어독해연습 완전학습 출시"], ["created_at", "2017-05-12 09:18:22.699953"], ["updated_at", "2017-05-12 09:18:22.699953"]]
+  [1m[35m (23.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능 절대평가로 바뀌나…교육계, 기대 반 우려 반"], ["created_at", "2017-05-12 09:18:22.729185"], ["updated_at", "2017-05-12 09:18:22.729185"]]
+  [1m[35m (17.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "\"논술·특기자전형 폐지, 수능 절대평가\""], ["created_at", "2017-05-12 09:18:22.751106"], ["updated_at", "2017-05-12 09:18:22.751106"]]
+  [1m[35m (15.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능은 절대 평가, 외고·자사고는 일반고 전환 추진"], ["created_at", "2017-05-12 09:18:22.770949"], ["updated_at", "2017-05-12 09:18:22.770949"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[새 정부 교육정책 전망]수능 전 과목 절대평가 전환"], ["created_at", "2017-05-12 09:18:22.794356"], ["updated_at", "2017-05-12 09:18:22.794356"]]
+  [1m[35m (15.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능개편 폭풍전야…절대평가 전환? 공통과목만 출제?"], ["created_at", "2017-05-12 09:18:22.813708"], ["updated_at", "2017-05-12 09:18:22.813708"]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "학생들 \"수능이 공정한데 비중 줄이겠다니…\""], ["created_at", "2017-05-12 09:18:22.832131"], ["updated_at", "2017-05-12 09:18:22.832131"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "중3부터 수능 절대평가...내신 고득점 경쟁 달아오른다"], ["created_at", "2017-05-12 09:18:22.850281"], ["updated_at", "2017-05-12 09:18:22.850281"]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "새 정부 수능 절대평가로 변화"], ["created_at", "2017-05-12 09:18:22.868231"], ["updated_at", "2017-05-12 09:18:22.868231"]]
+  [1m[35m (16.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[단독] 김상곤 \"2021학년도 수능부터 9등급 절대평가\""], ["created_at", "2017-05-12 09:18:22.890676"], ["updated_at", "2017-05-12 09:18:22.890676"]]
+  [1m[35m (20.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인 정부 뭐가 바뀌나] 입시정책 '일신'...수능·고교 내신 완전 절대평가..."], ["created_at", "2017-05-12 09:18:23.670748"], ["updated_at", "2017-05-12 09:18:23.670748"]]
+  [1m[35m (23.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "입시플라이, 리얼 오리지널 ‘6·9·11 평가원 수능기출 30회분’ 출시"], ["created_at", "2017-05-12 09:18:23.697919"], ["updated_at", "2017-05-12 09:18:23.697919"]]
+  [1m[35m (17.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "분당청솔학원, 2018 수능대비 반수반 개강…고3, N수생, 학부모 위한 입시전략..."], ["created_at", "2017-05-12 09:18:23.720038"], ["updated_at", "2017-05-12 09:18:23.720038"]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "697일만 QS, KIA 김진우 최종 수능 통과"], ["created_at", "2017-05-12 09:18:23.740637"], ["updated_at", "2017-05-12 09:18:23.740637"]]
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능 출제 오류…\"정부, 수험생에게 배상\""], ["created_at", "2017-05-12 09:18:23.757376"], ["updated_at", "2017-05-12 09:18:23.757376"]]
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "3년 뒤 주요대학 정시 사라지나…文 '수능 절대평가' 방침"], ["created_at", "2017-05-12 09:18:23.774834"], ["updated_at", "2017-05-12 09:18:23.774834"]]
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[오늘의 SNS 이슈] 수능오류 · 한미정상회담 · 휴대용 선풍기 폭발"], ["created_at", "2017-05-12 09:18:23.790406"], ["updated_at", "2017-05-12 09:18:23.790406"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[입시대장] 수능 못 봐도 ‘주요대학’ 합격하는 법"], ["created_at", "2017-05-12 09:18:23.808446"], ["updated_at", "2017-05-12 09:18:23.808446"]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[4~6등급으로 서울 수도권 대학 진학을 위한 적성고사전형 핵심포인트 ② 12개..."], ["created_at", "2017-05-12 09:18:23.822836"], ["updated_at", "2017-05-12 09:18:23.822836"]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능 내신 국어시험 1등급 대비, EBS 연계 문제 점검과 유형별 접근 전략이 관..."], ["created_at", "2017-05-12 09:18:23.838804"], ["updated_at", "2017-05-12 09:18:23.838804"]]
+  [1m[35m (14.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "내신과 수능 우수아로 키우려면 심화된 내용을 경험시켜라"], ["created_at", "2017-05-12 09:18:24.658279"], ["updated_at", "2017-05-12 09:18:24.658279"]]
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "대치·분당 명인학원 ‘김승리 강사’의 수능 국어 1등급 전략"], ["created_at", "2017-05-12 09:18:24.677834"], ["updated_at", "2017-05-12 09:18:24.677834"]]
+  [1m[35m (17.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "2014 수능 세계지리 오류… 법원 \"최고 1000만원씩 수험생에 배상하라\" 판결"], ["created_at", "2017-05-12 09:18:24.698815"], ["updated_at", "2017-05-12 09:18:24.698815"]]
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "잠실에 특화된 중고 내신·수능 전문"], ["created_at", "2017-05-12 09:18:24.717383"], ["updated_at", "2017-05-12 09:18:24.717383"]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "2014학년도 수능 세계지리 오류…수험생에 손해배상 판결"], ["created_at", "2017-05-12 09:18:24.735858"], ["updated_at", "2017-05-12 09:18:24.735858"]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[새 정부 정책]⑧수능 절대평가로 전환하고 외고·자사고 폐지"], ["created_at", "2017-05-12 09:18:24.753997"], ["updated_at", "2017-05-12 09:18:24.753997"]]
+  [1m[35m (21.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "자사고 폐지ㆍ수능 절대평가… 文 정부 교육공약에 혼란스러운 ‘중3’"], ["created_at", "2017-05-12 09:18:24.782402"], ["updated_at", "2017-05-12 09:18:24.782402"]]
+  [1m[35m (19.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "국정 교과서 폐지, 수능 절대평가 논의 불붙는다"], ["created_at", "2017-05-12 09:18:24.806875"], ["updated_at", "2017-05-12 09:18:24.806875"]]
+  [1m[35m (14.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "'외고·자사고 폐지, 수능 절대평가'‥교육개혁 예고"], ["created_at", "2017-05-12 09:18:24.826533"], ["updated_at", "2017-05-12 09:18:24.826533"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인 시대]대입 학생부·수능전형으로 단순화...논술 폐지"], ["created_at", "2017-05-12 09:18:24.842812"], ["updated_at", "2017-05-12 09:18:24.842812"]]
+  [1m[35m (13.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "6월 모평 대비, 전문과외사이트 대치수능연구소 학습플랜 제공"], ["created_at", "2017-05-12 09:18:25.653616"], ["updated_at", "2017-05-12 09:18:25.653616"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "2014년도 수능 오류… 고법 “최고 1000만원 수험생에 손해 배상”"], ["created_at", "2017-05-12 09:18:25.670000"], ["updated_at", "2017-05-12 09:18:25.670000"]]
+  [1m[35m (26.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인 당선] 수능·고교 내신 완전 절대평가제로…입시정책 확 바뀔 듯"], ["created_at", "2017-05-12 09:18:25.700929"], ["updated_at", "2017-05-12 09:18:25.700929"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인시대-교육?] 수능·고교내신 절대평가로…교육격차 해소 방점"], ["created_at", "2017-05-12 09:18:25.717734"], ["updated_at", "2017-05-12 09:18:25.717734"]]
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인 시대]입시 확 바뀌나…7월 수능 개편안 주목"], ["created_at", "2017-05-12 09:18:25.734949"], ["updated_at", "2017-05-12 09:18:25.734949"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "광주 남구, 강남 유명강사 초청 2018학년도 수능 설명회 개최"], ["created_at", "2017-05-12 09:18:25.751321"], ["updated_at", "2017-05-12 09:18:25.751321"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능 절대평가·외고 자사고 폐지...달라질 교육 정책"], ["created_at", "2017-05-12 09:18:25.771139"], ["updated_at", "2017-05-12 09:18:25.771139"]]
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "'쿨까당' 김지민 \"수능 수포자, 격하게 공감\""], ["created_at", "2017-05-12 09:18:25.790841"], ["updated_at", "2017-05-12 09:18:25.790841"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[영상] 문재인 시대, 수능 절대평가·대입 단순화···교육정책 대변화 예고"], ["created_at", "2017-05-12 09:18:25.807206"], ["updated_at", "2017-05-12 09:18:25.807206"]]
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[19대 대통령 문재인] 대입 수능 절대평가로 전환…외국어고·국제고 사라진다"], ["created_at", "2017-05-12 09:18:25.824743"], ["updated_at", "2017-05-12 09:18:25.824743"]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능 절대평가로 바뀌나…교육계, 기대 반 우려 반"], ["created_at", "2017-05-12 09:20:02.802393"], ["updated_at", "2017-05-12 09:20:02.802393"]]
+  [1m[35m (15.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능은 절대 평가, 외고·자사고는 일반고 전환 추진"], ["created_at", "2017-05-12 09:20:02.822388"], ["updated_at", "2017-05-12 09:20:02.822388"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "이투스, EBS 수능특강 영어독해연습 완전학습 출시"], ["created_at", "2017-05-12 09:20:02.836515"], ["updated_at", "2017-05-12 09:20:02.836515"]]
+  [1m[35m (14.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[새 정부 교육정책 전망]수능 전 과목 절대평가 전환"], ["created_at", "2017-05-12 09:20:02.854241"], ["updated_at", "2017-05-12 09:20:02.854241"]]
+  [1m[35m (16.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능개편 폭풍전야…절대평가 전환? 공통과목만 출제?"], ["created_at", "2017-05-12 09:20:02.874193"], ["updated_at", "2017-05-12 09:20:02.874193"]]
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "학생들 \"수능이 공정한데 비중 줄이겠다니…\""], ["created_at", "2017-05-12 09:20:02.890974"], ["updated_at", "2017-05-12 09:20:02.890974"]]
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "중3부터 수능 절대평가...내신 고득점 경쟁 달아오른다"], ["created_at", "2017-05-12 09:20:02.905167"], ["updated_at", "2017-05-12 09:20:02.905167"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "새 정부 수능 절대평가로 변화"], ["created_at", "2017-05-12 09:20:02.924648"], ["updated_at", "2017-05-12 09:20:02.924648"]]
+  [1m[35m (13.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[단독] 김상곤 \"2021학년도 수능부터 9등급 절대평가\""], ["created_at", "2017-05-12 09:20:02.942355"], ["updated_at", "2017-05-12 09:20:02.942355"]]
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인 정부 뭐가 바뀌나] 입시정책 '일신'...수능·고교 내신 완전 절대평가..."], ["created_at", "2017-05-12 09:20:02.961409"], ["updated_at", "2017-05-12 09:20:02.961409"]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "입시플라이, 리얼 오리지널 ‘6·9·11 평가원 수능기출 30회분’ 출시"], ["created_at", "2017-05-12 09:20:03.664566"], ["updated_at", "2017-05-12 09:20:03.664566"]]
+  [1m[35m (22.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "분당청솔학원, 2018 수능대비 반수반 개강…고3, N수생, 학부모 위한 입시전략..."], ["created_at", "2017-05-12 09:20:03.693082"], ["updated_at", "2017-05-12 09:20:03.693082"]]
+  [1m[35m (16.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "697일만 QS, KIA 김진우 최종 수능 통과"], ["created_at", "2017-05-12 09:20:03.714792"], ["updated_at", "2017-05-12 09:20:03.714792"]]
+  [1m[35m (16.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능 출제 오류…\"정부, 수험생에게 배상\""], ["created_at", "2017-05-12 09:20:03.736377"], ["updated_at", "2017-05-12 09:20:03.736377"]]
+  [1m[35m (17.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "3년 뒤 주요대학 정시 사라지나…文 '수능 절대평가' 방침"], ["created_at", "2017-05-12 09:20:03.758737"], ["updated_at", "2017-05-12 09:20:03.758737"]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[오늘의 SNS 이슈] 수능오류 · 한미정상회담 · 휴대용 선풍기 폭발"], ["created_at", "2017-05-12 09:20:03.770634"], ["updated_at", "2017-05-12 09:20:03.770634"]]
+  [1m[35m (14.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[입시대장] 수능 못 봐도 ‘주요대학’ 합격하는 법"], ["created_at", "2017-05-12 09:20:03.788976"], ["updated_at", "2017-05-12 09:20:03.788976"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[4~6등급으로 서울 수도권 대학 진학을 위한 적성고사전형 핵심포인트 ② 12개..."], ["created_at", "2017-05-12 09:20:03.805999"], ["updated_at", "2017-05-12 09:20:03.805999"]]
+  [1m[35m (17.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능 내신 국어시험 1등급 대비, EBS 연계 문제 점검과 유형별 접근 전략이 관..."], ["created_at", "2017-05-12 09:20:03.826969"], ["updated_at", "2017-05-12 09:20:03.826969"]]
+  [1m[35m (19.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "내신과 수능 우수아로 키우려면 심화된 내용을 경험시켜라"], ["created_at", "2017-05-12 09:20:03.849933"], ["updated_at", "2017-05-12 09:20:03.849933"]]
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "대치·분당 명인학원 ‘김승리 강사’의 수능 국어 1등급 전략"], ["created_at", "2017-05-12 09:20:04.447097"], ["updated_at", "2017-05-12 09:20:04.447097"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "2014 수능 세계지리 오류… 법원 \"최고 1000만원씩 수험생에 배상하라\" 판결"], ["created_at", "2017-05-12 09:20:04.468377"], ["updated_at", "2017-05-12 09:20:04.468377"]]
+  [1m[35m (14.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "잠실에 특화된 중고 내신·수능 전문"], ["created_at", "2017-05-12 09:20:04.486601"], ["updated_at", "2017-05-12 09:20:04.486601"]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "2014학년도 수능 세계지리 오류…수험생에 손해배상 판결"], ["created_at", "2017-05-12 09:20:04.512966"], ["updated_at", "2017-05-12 09:20:04.512966"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[새 정부 정책]⑧수능 절대평가로 전환하고 외고·자사고 폐지"], ["created_at", "2017-05-12 09:20:04.529549"], ["updated_at", "2017-05-12 09:20:04.529549"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "자사고 폐지ㆍ수능 절대평가… 文 정부 교육공약에 혼란스러운 ‘중3’"], ["created_at", "2017-05-12 09:20:04.546232"], ["updated_at", "2017-05-12 09:20:04.546232"]]
+  [1m[35m (17.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "국정 교과서 폐지, 수능 절대평가 논의 불붙는다"], ["created_at", "2017-05-12 09:20:04.566690"], ["updated_at", "2017-05-12 09:20:04.566690"]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "'외고·자사고 폐지, 수능 절대평가'‥교육개혁 예고"], ["created_at", "2017-05-12 09:20:04.581479"], ["updated_at", "2017-05-12 09:20:04.581479"]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인 시대]대입 학생부·수능전형으로 단순화...논술 폐지"], ["created_at", "2017-05-12 09:20:04.598278"], ["updated_at", "2017-05-12 09:20:04.598278"]]
+  [1m[35m (23.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "6월 모평 대비, 전문과외사이트 대치수능연구소 학습플랜 제공"], ["created_at", "2017-05-12 09:20:04.625190"], ["updated_at", "2017-05-12 09:20:04.625190"]]
+  [1m[35m (17.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "2014년도 수능 오류… 고법 “최고 1000만원 수험생에 손해 배상”"], ["created_at", "2017-05-12 09:20:05.234473"], ["updated_at", "2017-05-12 09:20:05.234473"]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인 당선] 수능·고교 내신 완전 절대평가제로…입시정책 확 바뀔 듯"], ["created_at", "2017-05-12 09:20:05.249998"], ["updated_at", "2017-05-12 09:20:05.249998"]]
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인시대-교육?] 수능·고교내신 절대평가로…교육격차 해소 방점"], ["created_at", "2017-05-12 09:20:05.266038"], ["updated_at", "2017-05-12 09:20:05.266038"]]
+  [1m[35m (18.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[문재인 시대]입시 확 바뀌나…7월 수능 개편안 주목"], ["created_at", "2017-05-12 09:20:05.287753"], ["updated_at", "2017-05-12 09:20:05.287753"]]
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "광주 남구, 강남 유명강사 초청 2018학년도 수능 설명회 개최"], ["created_at", "2017-05-12 09:20:05.303809"], ["updated_at", "2017-05-12 09:20:05.303809"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "수능 절대평가·외고 자사고 폐지...달라질 교육 정책"], ["created_at", "2017-05-12 09:20:05.318529"], ["updated_at", "2017-05-12 09:20:05.318529"]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "'쿨까당' 김지민 \"수능 수포자, 격하게 공감\""], ["created_at", "2017-05-12 09:20:05.333383"], ["updated_at", "2017-05-12 09:20:05.333383"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[영상] 문재인 시대, 수능 절대평가·대입 단순화···교육정책 대변화 예고"], ["created_at", "2017-05-12 09:20:05.349943"], ["updated_at", "2017-05-12 09:20:05.349943"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[19대 대통령 문재인] 대입 수능 절대평가로 전환…외국어고·국제고 사라진다"], ["created_at", "2017-05-12 09:20:05.366007"], ["updated_at", "2017-05-12 09:20:05.366007"]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "올해 수시 논술전형 인원 12%↓…수능 최저기준 미적용 대학은 10곳"], ["created_at", "2017-05-12 09:20:05.381545"], ["updated_at", "2017-05-12 09:20:05.381545"]]
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (36.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (17.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20170510080829)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170510080829"]]
+  [1m[35m (15.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-05-12 09:50:40.021187"], ["updated_at", "2017-05-12 09:50:40.021187"]]
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "\"현대무용축제 모다페, 우리의 삶 보듬고 위로하기를\""], ["created_at", "2017-05-13 13:04:28.615408"], ["updated_at", "2017-05-13 13:04:28.615408"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "EXP EDITION, '뉴욕 케이돌' 첫 무대 공개…\"Hello\" 아닌 \"안녕하세요\""], ["created_at", "2017-05-13 13:04:28.644419"], ["updated_at", "2017-05-13 13:04:28.644419"]]
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "충북문화재단, '헬로우 아트 랩(Hello Art Lab)'공모 진행"], ["created_at", "2017-05-13 13:04:28.657570"], ["updated_at", "2017-05-13 13:04:28.657570"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "국립진주박물관, 오는 30일 ‘Hello! Jinju 박물관 버스킹’ 열어"], ["created_at", "2017-05-13 13:04:28.673282"], ["updated_at", "2017-05-13 13:04:28.673282"]]
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "주한외국인 대상 찾아가는 문화공연(Hello.Mr.K!) 개최"], ["created_at", "2017-05-13 13:04:28.690903"], ["updated_at", "2017-05-13 13:04:28.690903"]]
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "싱어송라이터 폴킴, 단독 콘서트 'Hello, 폴킴' 전회차 매진으로 성료"], ["created_at", "2017-05-13 13:04:28.706349"], ["updated_at", "2017-05-13 13:04:28.706349"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[Hello CEO] 어디서나 이유식 만들 수 있는 믹서…여성이기에 필요한 것 알았..."], ["created_at", "2017-05-13 13:04:28.724063"], ["updated_at", "2017-05-13 13:04:28.724063"]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "헬로비너스(HELLO VENUS) 나라, 다이어트 자극 화보 공개"], ["created_at", "2017-05-13 13:04:28.738495"], ["updated_at", "2017-05-13 13:04:28.738495"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[HD포토] 헬로비너스(HELLOVENUS) 유영, ‘내 삶의 이유는 이유영’"], ["created_at", "2017-05-13 13:04:28.755002"], ["updated_at", "2017-05-13 13:04:28.755002"]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "도봉구 일자리카페 5월 취업프로그램 운영"], ["created_at", "2017-05-13 13:04:28.769537"], ["updated_at", "2017-05-13 13:04:28.769537"]]
+  [1m[35m (18.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "헬로비너스(HELLOVENUS) 나라, ‘수상한 파트너’ 출연 확정…‘지창욱과 호흡..."], ["created_at", "2017-05-13 13:04:29.251336"], ["updated_at", "2017-05-13 13:04:29.251336"]]
+  [1m[35m (15.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "“Hello, stranger”…‘클로저’ 메가박스 통해 20일 재개봉"], ["created_at", "2017-05-13 13:04:29.269573"], ["updated_at", "2017-05-13 13:04:29.269573"]]
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "주한외국인 대상 찾아가는 문화공연(Hello.Mr.K!) 개최"], ["created_at", "2017-05-13 13:04:29.286837"], ["updated_at", "2017-05-13 13:04:29.286837"]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[스타SNS] 헬로비너스(HELLOVENUS) 나라, 키를 가늠할 수 없는 우월한 비율"], ["created_at", "2017-05-13 13:04:29.302277"], ["updated_at", "2017-05-13 13:04:29.302277"]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "BTN불교TV 화려한 봄 개편"], ["created_at", "2017-05-13 13:04:29.318032"], ["updated_at", "2017-05-13 13:04:29.318032"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "폴리텍 춘천, 새학기 맞아 정감어린 Hello 캠페인"], ["created_at", "2017-05-13 13:04:29.334771"], ["updated_at", "2017-05-13 13:04:29.334771"]]
+  [1m[35m (15.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "버스커버스커 벚꽃엔딩과 맞먹는… 버블 시스터즈의 'Hello spring' 봄 향기 ..."], ["created_at", "2017-05-13 13:04:29.353707"], ["updated_at", "2017-05-13 13:04:29.353707"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "옥천군에선 ‘HELLO BABY’ 프로그램이 대세"], ["created_at", "2017-05-13 13:04:29.369787"], ["updated_at", "2017-05-13 13:04:29.369787"]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[스타SNS] 헬로비너스(HELLOVENUS) 나라, 깜찍한 브이 포즈와 함께 여신 미모..."], ["created_at", "2017-05-13 13:04:29.385741"], ["updated_at", "2017-05-13 13:04:29.385741"]]
+  [1m[35m (15.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "옥천군보건소, 임신부 구강관리 HELLO BABY! '호응'"], ["created_at", "2017-05-13 13:04:29.404409"], ["updated_at", "2017-05-13 13:04:29.404409"]]
+  [1m[35m (15.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "버블 시스터즈 리메이크 앨범 ‘Hello spring’ 오늘(10일) 정오 발매"], ["created_at", "2017-05-13 13:04:29.882721"], ["updated_at", "2017-05-13 13:04:29.882721"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "참人폴리텍 새학기 ‘Hello 캠페인’ 전개"], ["created_at", "2017-05-13 13:04:29.899686"], ["updated_at", "2017-05-13 13:04:29.899686"]]
+  [1m[35m (23.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[포토] 헬로비너스(HELLOVENUS) 나라-유영, '예쁘게 셀카 찍는중~'"], ["created_at", "2017-05-13 13:04:29.927336"], ["updated_at", "2017-05-13 13:04:29.927336"]]
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "KIAT 내달 6일까지 전국 5대 도시서 'Hello Week' 개최"], ["created_at", "2017-05-13 13:04:29.943134"], ["updated_at", "2017-05-13 13:04:29.943134"]]
+  [1m[35m (14.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[HD테마] 3월 21일 생일 맞은 스타…‘아스트로 (ASTRO) 윤산하-헬로비너스 (..."], ["created_at", "2017-05-13 13:04:29.964568"], ["updated_at", "2017-05-13 13:04:29.964568"]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[UP & DOWN] 'Hello 챔프 Adieu 시즌', ‘사이먼·라틀리프·밀러·바셋·장재..."], ["created_at", "2017-05-13 13:04:29.978972"], ["updated_at", "2017-05-13 13:04:29.978972"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "진세연, 산뜻한 ‘봄느낌’ 폴폴~ “Hello spring”"], ["created_at", "2017-05-13 13:04:29.993126"], ["updated_at", "2017-05-13 13:04:29.993126"]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[포토] 헬로비너스(HELLOVENUS) 라임, '예쁜 인형같은 패션센스~'"], ["created_at", "2017-05-13 13:04:30.006551"], ["updated_at", "2017-05-13 13:04:30.006551"]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[HD테마] 생기발랄 에너지 드링크 스타…‘헬로비너스 (HELLOVENUS) 나라-전현..."], ["created_at", "2017-05-13 13:04:30.022173"], ["updated_at", "2017-05-13 13:04:30.022173"]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "진주박물관 26일 'Hello! Jinju 박물관 버스킹'"], ["created_at", "2017-05-13 13:04:30.039304"], ["updated_at", "2017-05-13 13:04:30.039304"]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "버블 시스터즈, 리메이크 앨범 ‘Hello! Spring’ 발표 [공식]"], ["created_at", "2017-05-13 13:04:30.524488"], ["updated_at", "2017-05-13 13:04:30.524488"]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[포토] 헬로비너스(HELLOVENUS) 유영, '하트에 심쿵하겠어~'"], ["created_at", "2017-05-13 13:04:30.538966"], ["updated_at", "2017-05-13 13:04:30.538966"]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "폴킴, 단독 콘서트 ‘Hello, 폴킴’ 티켓 전석 매진"], ["created_at", "2017-05-13 13:04:30.553399"], ["updated_at", "2017-05-13 13:04:30.553399"]]
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "군산예술의전당 기획전시 Hello！ 아프리카展 성료"], ["created_at", "2017-05-13 13:04:30.568387"], ["updated_at", "2017-05-13 13:04:30.568387"]]
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "윤도현, 2017 WBC 응원가 'HELLO HERO' 제작"], ["created_at", "2017-05-13 13:04:30.582274"], ["updated_at", "2017-05-13 13:04:30.582274"]]
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[HD테마] 3월 13일 생일 맞은 스타…‘인피니트(INFINITE) 엘-유키스(U KISS)..."], ["created_at", "2017-05-13 13:04:30.598895"], ["updated_at", "2017-05-13 13:04:30.598895"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "군산시, Hello!! 아프리카展’ 1만명 돌파 기념 주말 연장운영"], ["created_at", "2017-05-13 13:04:30.615475"], ["updated_at", "2017-05-13 13:04:30.615475"]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[HD영상] ‘2017 F/W 헤라서울패션위크’ 로맨시크(ROMANCHIC) 시크릿(Secret..."], ["created_at", "2017-05-13 13:04:30.631780"], ["updated_at", "2017-05-13 13:04:30.631780"]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "‘헬로비너스(HELLOVENUS)’유영, tvN ‘써클’…걸크러쉬 신비서役"], ["created_at", "2017-05-13 13:04:30.646582"], ["updated_at", "2017-05-13 13:04:30.646582"]]
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[TF스타어플] 이준기, 아시아투어 팬미팅 감동 'Thank You' 뮤비로 승화"], ["created_at", "2017-05-13 13:04:30.662123"], ["updated_at", "2017-05-13 13:04:30.662123"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[MWC 2017 Preview] Ciel Introduces Location-Based Shuttle Bus Solution '..."], ["created_at", "2017-05-13 13:04:31.161275"], ["updated_at", "2017-05-13 13:04:31.161275"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "AED스토어, 전문 쇼핑몰 'HELLO AED' 오픈"], ["created_at", "2017-05-13 13:04:31.181329"], ["updated_at", "2017-05-13 13:04:31.181329"]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "그래미상 5관왕에 오른 아델의 ‘헬로(Hello)’"], ["created_at", "2017-05-13 13:04:31.196281"], ["updated_at", "2017-05-13 13:04:31.196281"]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Earnings of CJ Cheiljedang and CJ HelloVision expected to improve in 201..."], ["created_at", "2017-05-13 13:04:31.210373"], ["updated_at", "2017-05-13 13:04:31.210373"]]
+  [1m[35m (32.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "군산예술의전당, 'Hello!! 아프리카展’ 주말 연장운영"], ["created_at", "2017-05-13 13:04:31.246206"], ["updated_at", "2017-05-13 13:04:31.246206"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Hello!! 아프리카전' 1만명 돌파 주말 연장운영"], ["created_at", "2017-05-13 13:04:31.262341"], ["updated_at", "2017-05-13 13:04:31.262341"]]
+  [1m[35m (13.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[MLB CUT] '나폴리의 Hello' MLB스타에게 어울리는 등장곡은?"], ["created_at", "2017-05-13 13:04:31.279926"], ["updated_at", "2017-05-13 13:04:31.279926"]]
+  [1m[35m (14.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "용인문화재단 출범 5주년 기념공연 ‘Hello, Spring! 김동규의 멋진 날’"], ["created_at", "2017-05-13 13:04:31.297974"], ["updated_at", "2017-05-13 13:04:31.297974"]]
+  [1m[35m (14.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "군산예술의전당 기획전시 Hello! 아프리카展 성료"], ["created_at", "2017-05-13 13:04:31.319621"], ["updated_at", "2017-05-13 13:04:31.319621"]]
+  [1m[35m (19.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[HD포토] 헬로비너스(HELLOVENUS) 나라, ‘헬로 큐피트’"], ["created_at", "2017-05-13 13:04:31.342496"], ["updated_at", "2017-05-13 13:04:31.342496"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[스타SNS] 헬로비너스(HELLOVENUS) 나라, 미모에 몸매까지 ‘완벽 그 자체’"], ["created_at", "2017-05-13 13:04:31.882496"], ["updated_at", "2017-05-13 13:04:31.882496"]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[예능리뷰] ‘해피투게더’ 헬로비너스(HELLOVENUS) 나라, 다이어트 방법 공개..."], ["created_at", "2017-05-13 13:04:31.898374"], ["updated_at", "2017-05-13 13:04:31.898374"]]
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "그래미 어워드 아델 'Hello' 무대에 네티즌 극찬 \"이러니 갓델\""], ["created_at", "2017-05-13 13:04:31.917719"], ["updated_at", "2017-05-13 13:04:31.917719"]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[HD포토] 헬로비너스(HELLOVENUS) 유영, ‘내 삶의 이유는 이유영’"], ["created_at", "2017-05-13 13:04:31.936289"], ["updated_at", "2017-05-13 13:04:31.936289"]]
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "헬로비너스(HELLOVENUS) 나라, 올블랙 패션 ‘우월한몸매’"], ["created_at", "2017-05-13 13:04:31.957414"], ["updated_at", "2017-05-13 13:04:31.957414"]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "비비안, 봄 신상품 '헬로핏(Hello Fit) 브라' 선봬"], ["created_at", "2017-05-13 13:04:31.976096"], ["updated_at", "2017-05-13 13:04:31.976096"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "'Hello 로봇과 코딩' 프로그램 진행"], ["created_at", "2017-05-13 13:04:31.994186"], ["updated_at", "2017-05-13 13:04:31.994186"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "부산국제단편영화제 포스터…김형욱 'Hello Stranger'"], ["created_at", "2017-05-13 13:04:32.015317"], ["updated_at", "2017-05-13 13:04:32.015317"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[스타SNS] 헬로비너스(HELLOVENUS) 나라, 감탄 자아내는 9등신 비율 ‘마네킹..."], ["created_at", "2017-05-13 13:04:32.030926"], ["updated_at", "2017-05-13 13:04:32.030926"]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "빅톤, 첫 日 라이브 공연...2000여팬 열광 '차세대 한류돌' 등극"], ["created_at", "2017-05-13 13:04:32.042771"], ["updated_at", "2017-05-13 13:04:32.042771"]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "진주박물관 'Hello! Jinju 박물관 버스킹' 개최"], ["created_at", "2017-05-13 13:04:32.593298"], ["updated_at", "2017-05-13 13:04:32.593298"]]
+  [1m[35m (16.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[스타SNS] 헬로비너스(HELLOVENUS) 나라, 꽃보다 아름다운 여신 미모 발산"], ["created_at", "2017-05-13 13:04:32.617814"], ["updated_at", "2017-05-13 13:04:32.617814"]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "헬로비너스(HELLOVENUS) 나라-유영 각선미, ‘부러우면 지는 건데 이미 완패’"], ["created_at", "2017-05-13 13:04:32.641694"], ["updated_at", "2017-05-13 13:04:32.641694"]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "그래미 어워드 여왕으로 등극한 아델, 메가 히트곡 ‘헬로’(Hello) 올해의 노..."], ["created_at", "2017-05-13 13:04:32.659016"], ["updated_at", "2017-05-13 13:04:32.659016"]]
+  [1m[35m (20.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "그래미상 5관왕 품은 아델… “Hello”"], ["created_at", "2017-05-13 13:04:32.683997"], ["updated_at", "2017-05-13 13:04:32.683997"]]
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "아델, ‘Hello’로 그래미 오프닝…팝 솔로 퍼포먼스 등 2개 수상"], ["created_at", "2017-05-13 13:04:32.712312"], ["updated_at", "2017-05-13 13:04:32.712312"]]
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "아델 '헬로(hello)', 그래미 시상식 '올해의 노래' 선정"], ["created_at", "2017-05-13 13:04:32.734771"], ["updated_at", "2017-05-13 13:04:32.734771"]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "부산 웨스틴조선호텔 'Hello 2017' 패키지 눈길"], ["created_at", "2017-05-13 13:04:32.758589"], ["updated_at", "2017-05-13 13:04:32.758589"]]
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "삼성전자, '헬로(Hello)' 상표 출원.. 갤럭시S8 AI 서비스일까?"], ["created_at", "2017-05-13 13:04:32.780704"], ["updated_at", "2017-05-13 13:04:32.780704"]]
+  [1m[35m (14.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "군산예술의전당 Hello!! 아프리카전展"], ["created_at", "2017-05-13 13:04:32.803230"], ["updated_at", "2017-05-13 13:04:32.803230"]]
+  [1m[35m (32.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "서현·에릭남, 서현 신곡 'Hello'로 칭찬 주고 받기…훈훈함 폴폴"], ["created_at", "2017-05-13 13:04:33.448866"], ["updated_at", "2017-05-13 13:04:33.448866"]]
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[Hello CEO] \"워킹맘도 맘껏 일하며 좋은 엄마 될 수 있어요\""], ["created_at", "2017-05-13 13:04:33.470646"], ["updated_at", "2017-05-13 13:04:33.470646"]]
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Things to do at hotels during golden holiday"], ["created_at", "2017-05-13 13:04:33.489466"], ["updated_at", "2017-05-13 13:04:33.489466"]]
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[스타포커스] 헬로비너스(HELLOVENUS), 6년차 여신들의 컴백이 기대되는 이유"], ["created_at", "2017-05-13 13:04:33.508194"], ["updated_at", "2017-05-13 13:04:33.508194"]]
+  [1m[35m (21.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[HD영상] 헬로비너스(HELLOVENUS) 쇼케이스, ‘여신돌’에서 ‘비밀요원’으로..."], ["created_at", "2017-05-13 13:04:33.536620"], ["updated_at", "2017-05-13 13:04:33.536620"]]
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[HD테마] 헬로비너스(HELLOVENUS) 신곡 MV에 출동할 예정인 남신들…‘서강준..."], ["created_at", "2017-05-13 13:04:33.555859"], ["updated_at", "2017-05-13 13:04:33.555859"]]
+  [1m[35m (14.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "'골든탬버린' 명불허전 유세윤, 아델의 'Hello'로 빅재미 선사(종합)"], ["created_at", "2017-05-13 13:04:33.575545"], ["updated_at", "2017-05-13 13:04:33.575545"]]
+  [1m[35m (18.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "CJ HelloVision offering extra discount for budget mobile service"], ["created_at", "2017-05-13 13:04:33.598772"], ["updated_at", "2017-05-13 13:04:33.598772"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "아델, 헬로(Hello) '올해의 노래'…제59회 그래미상 시상식"], ["created_at", "2017-05-13 13:04:33.616494"], ["updated_at", "2017-05-13 13:04:33.616494"]]
+  [1m[35m (20.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "'그래미어워드' 아델, 비욘세 제치고 '5관왕' 꿰찬 노래는? 'Hello'"], ["created_at", "2017-05-13 13:04:33.640729"], ["updated_at", "2017-05-13 13:04:33.640729"]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[보도자료] 안철수 지지선언 이유 '미래를 보는 안목' 1위"], ["created_at", "2017-05-13 13:04:34.117959"], ["updated_at", "2017-05-13 13:04:34.117959"]]
+  [1m[35m (14.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[이슈] 볼빨간사춘기의 로스트테일 OST 'Hello' 풀버전 떴다"], ["created_at", "2017-05-13 13:04:34.137120"], ["updated_at", "2017-05-13 13:04:34.137120"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[Hello CEO] 섬세함 필수인 의료·뷰티…여성인게 강점이죠"], ["created_at", "2017-05-13 13:04:34.152298"], ["updated_at", "2017-05-13 13:04:34.152298"]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "군산예술의전당, 겨울방학 특별전시 ‘Hello!! 아프리카展’"], ["created_at", "2017-05-13 13:04:34.166289"], ["updated_at", "2017-05-13 13:04:34.166289"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "볼빨간사춘기 \"'로스트테일' OST 'Hello', 밝은 느낌 표현하고 싶었다\""], ["created_at", "2017-05-13 13:04:34.180621"], ["updated_at", "2017-05-13 13:04:34.180621"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "밴드 MAS 0094, 中 후난성 팬들과 특별한 새해 맞았다…'Hello 성광삼림 신년..."], ["created_at", "2017-05-13 13:04:34.197530"], ["updated_at", "2017-05-13 13:04:34.197530"]]
+  [1m[35m (15.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[HD영상] 에이프릴(April)-헬로비너스(HELLOVENUS), 핫팩없어도 핫팩같은 따뜻..."], ["created_at", "2017-05-13 13:04:34.217133"], ["updated_at", "2017-05-13 13:04:34.217133"]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "라디오 방송 'HELLO, 시조' 다시읽기"], ["created_at", "2017-05-13 13:04:34.234271"], ["updated_at", "2017-05-13 13:04:34.234271"]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[스타SNS] 헬로비너스(HELLOVENUS) 나라, 손가락 하트와 함께 청순 매력 발산..."], ["created_at", "2017-05-13 13:04:34.249050"], ["updated_at", "2017-05-13 13:04:34.249050"]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "소리 맛보는 남자… \"아델의 Hello는 고무줄 맛\""], ["created_at", "2017-05-13 13:04:34.265341"], ["updated_at", "2017-05-13 13:04:34.265341"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[포토] 헬로비너스(HELLOVENUS), '모델같은 헬로비너스~'"], ["created_at", "2017-05-13 13:04:34.820564"], ["updated_at", "2017-05-13 13:04:34.820564"]]
+  [1m[35m (22.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[HD테마] 생기발랄 에너지 드링크 스타…‘헬로비너스 (HELLOVENUS) 나라-전현..."], ["created_at", "2017-05-13 13:04:34.846581"], ["updated_at", "2017-05-13 13:04:34.846581"]]
+  [1m[35m (17.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "진주박물관 26일 'Hello! Jinju 박물관 버스킹'"], ["created_at", "2017-05-13 13:04:34.867025"], ["updated_at", "2017-05-13 13:04:34.867025"]]
+  [1m[35m (21.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "버블 시스터즈, 리메이크 앨범 ‘Hello! Spring’ 발표 [공식]"], ["created_at", "2017-05-13 13:04:34.893759"], ["updated_at", "2017-05-13 13:04:34.893759"]]
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[포토] 헬로비너스(HELLOVENUS) 유영, '하트에 심쿵하겠어~'"], ["created_at", "2017-05-13 13:04:34.909965"], ["updated_at", "2017-05-13 13:04:34.909965"]]
+  [1m[35m (16.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "폴킴, 단독 콘서트 ‘Hello, 폴킴’ 티켓 전석 매진"], ["created_at", "2017-05-13 13:04:34.929749"], ["updated_at", "2017-05-13 13:04:34.929749"]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "군산예술의전당 기획전시 Hello！ 아프리카展 성료"], ["created_at", "2017-05-13 13:04:34.942954"], ["updated_at", "2017-05-13 13:04:34.942954"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[포토] 헬로비너스(HELLOVENUS) 서영, '제 마음이에요~'"], ["created_at", "2017-05-13 13:04:34.962476"], ["updated_at", "2017-05-13 13:04:34.962476"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "윤도현, 2017 WBC 응원가 'HELLO HERO' 제작"], ["created_at", "2017-05-13 13:04:34.977595"], ["updated_at", "2017-05-13 13:04:34.977595"]]
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "[HD테마] 3월 13일 생일 맞은 스타…‘인피니트(INFINITE) 엘-유키스(U KISS)..."], ["created_at", "2017-05-13 13:04:34.992926"], ["updated_at", "2017-05-13 13:04:34.992926"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 125.141.19.16 at 2017-05-13 13:05:45 +0000
+Cannot render console from 125.141.19.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.1.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.1.0/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 25ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 125.141.19.16 at 2017-05-13 13:05:57 +0000
+Cannot render console from 125.141.19.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.0) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/articles/index" for 125.141.19.16 at 2017-05-13 13:06:03 +0000
+Cannot render console from 125.141.19.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (65.6ms)
+Completed 200 OK in 453ms (Views: 440.8ms | ActiveRecord: 3.7ms)
+
+
